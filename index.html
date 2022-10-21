@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+        <meta name="color-scheme" content="light dark">
+        <meta name="theme-color" content="">
+        <script>
+            if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+                document.documentElement.style.display = 'none';
+                document.head.insertAdjacentHTML(
+                    'beforeend',
+                    '<link rel="stylesheet" href="light.css onload="document.documentElement.style.display = \'\'">'
+                );
+            }
+        </script>
+        <link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet" href="light.css" media="(prefers-color-scheme: light)" />
+        <link rel="stylesheet" href="index.css">
+        <script src="theme-switch.js" defer></script>
+    </head>
+    <body>
+        <button id="theme-switch" aria-label="auto" aria-live="polite">
+            <div id="sun-and-moon">
+                <div id="body"></div>
+                <div id="mask"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+            </div>
+        </button>
+        <main>
+            <form>
+                <input name="seed" type="color">
+                <select name="mode">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+                <button type="submit">Get color scheme</button>
+            </form>
+            <div id="colors">
+                <div>
+                    <div class="color-name"></div>
+                </div>
+                <div>
+                    <div class="color-name"></div>
+                </div>
+                <div>
+                    <div class="color-name"></div>
+                </div>
+                <div>
+                    <div class="color-name"></div>
+                </div>
+                <div>
+                    <div class="color-name"></div>
+                </div>
+            </div>
+        <script src="index.js"></script>
+    </body>
+</html>
